@@ -1,0 +1,62 @@
+<div class="card d-flex flex-wrap">
+  <div class="card-title mt-3 mb-1 ms-2 text-success">
+    <strong> Leave a Comments</strong>
+    <p class="text-dark "> You can leave a comments use this comment form <span class="float-end ">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+          Comments {{comments.length}}
+        </button>
+      </span></p>
+      demo comments
+      <dl>
+        <ng-container *ngFor="let comment of comments">
+          <dt>{{comment.commentAs}}</dt>
+          <dd>{{comment.commentContent}}</dd>
+
+        </ng-container>
+      </dl>
+  </div>
+  <div class="card-body">
+    <form    [formGroup]= "commentForm">
+      <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">Name</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Name"
+          formControlName="commentAs">
+      </div>
+      <div class="mb-3  ">
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1 ">Comments</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"
+            formControlName="commentContent"></textarea>
+        </div>
+      </div>
+      <button type="button" class="btn btn-success" (click)="addComment()">Add a Comments</button>
+    </form>
+  </div>
+
+</div>
+
+
+<!-- Scrollable modal -->
+<div class="modal-dialog modal-dialog-scrollable">
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Comments</h5>
+          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- <ul  *ngFor="let comment of matrix">
+            <li>{{comment.comments}}</li>
+          </ul> -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" (click)="addComment()">Add Comment</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+<div class="container">
+  <h1 class="text-center">Update Profile</h1>
+  <form [formGroup]="updateForm" (ngSubmit)="onUpdate()">
+
+    <div class="form-group row mt-4">
+      <label for="username" class="col-sm-2 col-form-label ">Username</label>
+      <div class="col-sm-6">
+        <input type="text" class="form-control" id="username" formControlName="userName" required>
+      </div>
+    </div>
+    <div class="form-group row mt-4">
+      <label for="email" class="col-sm-2 col-form-label">Email</label>
+      <div class="col-sm-6">
+        <input type="email" class="form-control" id="email" formControlName="email" required
+          [value]="userData.params.email">
+      </div>
+    </div>
+    <div class="form-group row mt-4">
+      <label for="Name" class="col-sm-2 col-form-label">Name</label>
+      <div class="col-sm-6">
+        <input type="text" class="form-control" id="name" formControlName="name" required
+          [value]="userData.params.name">
+      </div>
+    </div>
+
+
+    <div class="form-group row mt-4">
+      <label for="password" class="col-sm-2 col-form-label">Password</label>
+      <div class="col-sm-6">
+        <input type="text" class="form-control" id="password" formControlName="password" required
+          [value]="userData.params.password">
+      </div>
+    </div>
+    <div class="form-group row mt-4">
+      <label for="Mobile" class="col-sm-2 col-form-label">Mobile</label>
+      <div class="col-sm-6">
+        <input type="text" class="form-control" id="Mobile" formControlName="mobile" required
+          [value]="userData.params.mobile">
+      </div>
+    </div>
+    <button type="submit" class="btn btn-danger float-end mt-5 mb-5">Update</button>
+  </form>
+</div>

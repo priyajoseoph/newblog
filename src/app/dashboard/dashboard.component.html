@@ -1,0 +1,64 @@
+<div class="container">
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Blog App</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }">
+                    <a class="nav-link" href="../home">Home</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav> -->
+
+    <div class=" d-flex  row">
+        <div class="col-lg-4  shadow-effect ms-4 mt-5">
+            <div class="card shadow-effect    " routerLink='/createpost'>
+                <div class="card-body    ">
+                    <i class="fa-solid fa-clipboard"></i>
+                    <a href="../createpost"></a>
+                    <h1 class="text-center mb-3"> POSTS </h1>
+                    <p class="text-center">Create your Post from here ...</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4  shadow-effect ms-4 mt-5">
+            <div class="card shadow-effect    " routerLink='/viewprofile'>
+                <div class="card-body    ">
+                    <i class="fa-solid fa-clipboard"></i>
+
+                    <a href="../viewprofile"></a>
+                    <h1 class="text-center mb-3"> Profile</h1>
+                    <p class="text-center">View your Profile here ...</p>
+                </div>
+            </div>
+        </div>
+        <div class=" d-flex row ">
+            <div class="col-lg-4  shadow-effect ms-4 mt-5">
+                <div class="card shadow-effect    " routerLink='/managepost'>
+                    <div class="card-body    ">
+                        <i class="fa-solid fa-clipboard"></i>
+                        <a href="../managepost"></a>
+                        <h1 class="text-center mb-3"> POSTS </h1>
+                        <p class="text-center"> Manage your Post from here ...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4  shadow-effect ms-4 mt-5 ">
+                <div class="card shadow-effect    " routerLink='/home'>
+                    <div class="card-body    ">
+                        <i class="fa-solid fa-clipboard"></i>
+                        <a href="../home"></a>
+                        <h1 class="text-center mb-3"> Posts</h1>
+                        <p class="text-center">Here is My Posts ...</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>

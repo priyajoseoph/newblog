@@ -1,0 +1,26 @@
+<div class="d-flex flex-wrap">
+  <div class="card-deck " style="width: 25rem; " *ngFor="let item of blogData">
+    <div class="card mb-5 me-5">
+      <a [routerLink]="['../single-category']" [queryParams]="{blogId: item.blogId}">
+
+        <img class="card-img-top " [src]="'https://sheik-blog.onrender.com'+item.blogImage" height="250px"
+          alt="Card image cap">
+      </a>
+      <div class="card-body">
+        <div class="card-title ">{{item.category}}</div>
+        <div class="spacer _16"></div>
+        <p class="card-heading">{{item.blogTitle}}</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">{{item.createdAt | date}}</small>
+      </div>
+
+      <!-- <a [routerLink]="['../single-category']" [queryParams]= "{blogId: item.blogId}"class="mb-3 ps-2 text-dark">ReadMore </a> -->
+
+
+
+
+    </div>
+  </div>
+
+</div>

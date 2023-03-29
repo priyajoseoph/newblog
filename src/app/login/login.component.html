@@ -1,0 +1,50 @@
+ <div class="container mt-5 ml-5 mb-5">       
+    <form [formGroup]="loginForm" >
+      <div class=" mt-5 ms-5">
+        <div class="form-group col-sm-6">
+          <label>USERNAME</label>
+          <input type="text" class="form-control" [(ngModel)]="name1" placeholder="Email Id/Mobile Number" formControlName="username" />
+          <!-- <p>Value: {{name1}}</p> -->
+          
+
+          <div *ngIf="
+                  loginControls['username'].touched &&
+                  loginControls['username'].invalid
+                " class="text-danger">
+            <span *ngIf="loginControls['username'].errors?.['required']">Email or Mobile number is required.</span>
+          </div>
+        </div>
+    
+        <div class="form-group col-sm-6">
+          <label>Password</label>
+          <input type="password" class="form-control" placeholder="Password" formControlName="password" />
+        </div>
+        <div *ngIf="
+                loginControls['password'].touched &&
+                loginControls['password'].invalid
+              " class="text-danger">
+          <div *ngIf="loginControls['password'].errors?.['required']">
+            Password is required.
+          </div>
+          <div *ngIf="loginControls['password'].errors?.['minlength']">
+            Password should be minimum 6 character.
+          </div>
+        </div>
+        <div class="form-group col-sm-6 mt-5 mb-5">
+          <button class="btn btn-primary"  role="button" (click)="login()">LogIn</button>
+        </div>
+      </div>
+    
+      <div class="crs_log__footer d-flex justify-content-between ms-5">
+        <div class="fhg_45">
+          <p class="musrt">
+            Don't have account? <a href="../signup" class="theme-cl">SignUp</a>
+          </p>
+        </div>
+      </div>
+    </form>
+    </div>
+
+
+
+    
